@@ -21,6 +21,26 @@ The **Flight Management System** is a robust, Java-based web application designe
 
 ---
 
+
+## 📸 Application Screenshots
+
+### 🔐 Login Page
+![Login Page](Screenshots/Login.png)
+
+### 📝 Register Page
+![Register Page](Screenshots/Admin.png)
+
+### 🏢 Admin Dashboard
+![Admin Dashboard](Screenshots/Admin_hai.png)
+
+### 🎫 Flight Booking Interface
+![Flight Booking](Screenshots/booking.png)
+
+### 🛫 Boarding Page
+![Boarding Page](Screenshots/we.png)
+
+---
+
 ## 🔥 System Architecture Diagram
 
 ```mermaid
