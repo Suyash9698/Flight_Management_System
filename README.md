@@ -1,100 +1,116 @@
-# Flight Management System
+# ✈️ Flight Management System
 
-## Project Overview
-
-The **Flight Management System** is a Java-based application developed to facilitate flight booking and management. It consolidates real-time data from airline carriers, allowing customers to book, view, update, and cancel flights with ease. Administrators can manage all flight, schedule, and route data in one system, making it an efficient solution for both travelers and airlines.
-
----
-
-## Features
-
-### Customer Features:
-
-- **Account Creation:** Customers can create accounts to manage their bookings.
-- **Login and Authentication:** Secure login for customers.
-- **View Flights:** Check available flights, schedules, and routes.
-- **Book Flights:** Make a flight reservation.
-- **Modify or Cancel Booking:** Update or cancel existing reservations.
-- **View Booking History:** Access past bookings.
-
-### Administrator Features:
-
-- **Admin Login:** Administrators can securely log in to manage the system.
-- **Manage Flights:** Add, view, modify, or delete flight information.
-- **Manage Schedules:** Administer flight schedules and avoid conflicts.
-- **Manage Routes:** Set and update flight routes between different airports.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JDBC](https://img.shields.io/badge/JDBC-4A90E2?style=for-the-badge&logo=database&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
-## Project Scope
+## 🚀 Project Overview
 
-### In-Scope:
+The **Flight Management System** is a robust, Java-based web application designed to streamline airline ticket bookings and flight management. It provides an intuitive interface for **customers** to book, modify, and cancel flights effortlessly, while also enabling **administrators** to manage schedules, routes, and overall airline operations efficiently.
 
-- Customer and Administrator access with distinct privileges.
-- Full customer functionality for managing flight bookings.
-- Administrative features for flight, schedule, and route management.
-
-### Out-of-Scope:
-
-- Boarding pass generation.
-- Third-party integrations like SMS and email notifications.
-- Payment processing functionality.
+> ✨ **Why This Project?**
+> - Simplifies **flight bookings** and management.
+> - Ensures seamless coordination between **customers** and **airlines**.
+> - Provides a **scalable** and **secure** backend with Spring Boot & MySQL.
 
 ---
 
-## Technologies Used
+## 🔥 System Architecture Diagram
 
-- **Java**
-- **Spring Framework (for Backend)**
-- **MySQL (Database)**
-- **JDBC**
-- **HTML/CSS/JavaScript (for Frontend)**
-
----
-
-## Modules Implemented
-
-1. **User Authentication and Registration:**
-   - User account creation, login, email verification, and password reset.
-
-2. **Flight Booking System:**
-   - Flight booking interface with flight selection, time slots, and source/destination airports.
-
-3. **Schedule Management:**
-   - Manage flight schedules and prevent double bookings.
-
-4. **Passenger Information Management:**
-   - Store and manage passenger data securely.
-
-5. **Admin Dashboard:**
-   - A complete dashboard for administrators to manage users, flights, schedules, and routes.
+```mermaid
+graph TD
+    A[User] -->|Search Flights| B[Flight Search Module]
+    A -->|Book Flight| C[Booking Module]
+    C -->|Stores Data| D[Database MySQL]
+    A -->|Modify or Cancel| E[Modification Module]
+    A -->|View Booking History| F[History Module]
+    G[Admin] -->|Manage Flights| H[Flight Management]
+    G -->|Schedule Management| I[Schedule Management]
+    G -->|Route Management| J[Route Management]
+    D -->|Fetches Data| B
+    D -->|Updates Bookings| C
+    D -->|Stores Schedule| I
+    D -->|Stores Routes| J
+```
 
 ---
 
-## Installation and Setup
+## ✨ Features
 
-### Prerequisites:
+### 🛫 Customer Features:
+- 👤 **User Registration & Login** – Secure authentication with encrypted passwords.
+- 🔍 **Search Flights** – View available flights based on destination, date, and time.
+- 🎫 **Book a Flight** – Make reservations in real-time.
+- 🔄 **Modify or Cancel Booking** – Change/cancel flights as per policy.
+- 🗂 **View Booking History** – Track past & upcoming flight details.
 
+### 🏢 Administrator Features:
+- 🔐 **Admin Login** – Access a dedicated admin panel.
+- ✈️ **Manage Flights** – Add, update, or remove flights.
+- 📅 **Schedule Management** – Adjust flight schedules to prevent conflicts.
+- 🌍 **Route Management** – Set flight routes between airports.
+
+---
+
+## 📌 Project Scope
+
+### ✅ **In-Scope:**
+✔️ Fully functional **customer booking system**.  
+✔️ Comprehensive **admin panel** for flight management.  
+✔️ Secure **user authentication** & authorization.  
+✔️ Seamless **CRUD operations** for flights, schedules, and routes.  
+
+### ❌ **Out-of-Scope:**
+❌ Boarding pass generation.  
+❌ Integration with external payment gateways.  
+❌ Real-time flight tracking & live seat availability.
+
+---
+
+## 🛠️ Tech Stack
+
+| Backend  | Database | Frontend  | Tools |
+|----------|----------|-----------|--------|
+| Java 8+  | MySQL    | HTML/CSS/JS | Maven/Gradle |
+| Spring Boot | JDBC | Bootstrap | Postman (API Testing) |
+| Spring Security | Hibernate | Thymeleaf | Git/GitHub |
+
+---
+
+## 🔥 Modules Implemented
+
+1. **🔐 Authentication & Authorization** – User registration, login, and secure session management.
+2. **✈️ Flight Booking System** – Flight search, booking, and modification functionalities.
+3. **📅 Schedule Management** – Admins can schedule flights and prevent duplicate bookings.
+4. **👥 Passenger Information** – Securely store & manage passenger details.
+5. **📊 Admin Dashboard** – A responsive panel for administrators to manage everything.
+
+---
+
+## 🏗️ Installation & Setup
+
+### 📌 Prerequisites:
 - Java Development Kit (JDK) 8+
 - MySQL Database
-- Maven or Gradle for project dependencies
+- Maven/Gradle for dependency management
 
-### Steps to Run the Project:
+### 🛠️ Steps to Run the Project:
 
-1. **Clone the repository:**
+1️⃣ **Clone the repository:**
+```bash
+ git clone https://github.com/your-github-username/flight-management-system.git
+ cd flight-management-system
+```
 
-   ```bash
-   git clone https://github.com/your-github-username/flight-management-system.git
-   cd flight-management-system
-   ```
-
-## Configure the Database:
-
-Run the provided SQL script to create the necessary tables:
-
+2️⃣ **Configure the Database:**
 ```sql
 CREATE DATABASE flight_management;
-
 USE flight_management;
 
 CREATE TABLE users (
@@ -105,55 +121,51 @@ CREATE TABLE users (
     userPhone BIGINT,
     userEmail VARCHAR(100)
 );
-
 -- Add other necessary tables
-
 ```
-## Configure the Application:
 
-Update the `application.properties` file located in `src/main/resources` with your MySQL credentials:
-
+3️⃣ **Update Database Credentials in `application.properties`:**
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/flight_management
 spring.datasource.username=root
 spring.datasource.password=your_password
-
 ```
-## Build and Run the Application:
 
-### Using Maven:
-
+4️⃣ **Run the Project:**
 ```bash
 mvn spring-boot:run
 ```
 
-### Using Gradle:
-
-```bash
-gradle bootRun
-```
-## Access the Application:
+5️⃣ **Access the Application:**
 ```
 http://localhost:8080
-
 ```
-## Project Timeline
 
-### Milestone 1: User Authentication and Flight Availability
-- Completed user authentication and registration (Weeks 1-3).
+---
 
-### Milestone 2: Booking System
-- Developed and integrated flight booking system (Weeks 4-5).
+## 🏆 Project Timeline
 
-### Milestone 3: Schedule Management and Passenger Information
-- Implemented schedule management and passenger data security (Weeks 6-7).
+### 📅 Milestones:
+| Milestone | Task | Duration |
+|-----------|-----------------------------|-----------|
+| ✅ M1 | Authentication & Registration | Weeks 1-3 |
+| ✅ M2 | Flight Booking System | Weeks 4-5 |
+| ✅ M3 | Schedule & Passenger Management | Weeks 6-7 |
+| ✅ M4 | Admin Dashboard & Final Testing | Weeks 8-10 |
 
-### Milestone 4: Admin Dashboard and Final Integration
-- Completed admin dashboard and final feature integrations (Weeks 8-10).
+---
 
-## Future Enhancements
-- **Payment Integration:** Add payment gateways for booking flights.
-- **Boarding Pass Generation:** Automatically generate boarding passes after booking.
-- **Email/SMS Notifications:** Integrate email or SMS notifications for booking confirmations.
+## 🚀 Future Enhancements
 
+✨ **Payment Gateway Integration** – Enable secure online payments.  
+✨ **Boarding Pass Generation** – Automatically generate printable passes.  
+✨ **Real-time Flight Tracking** – Show flight status with live updates.  
+✨ **SMS/Email Notifications** – Send booking confirmations & reminders.
 
+---
+
+## 📞 Contact & Contribution
+
+🤝 Want to contribute? Feel free to fork the repo and submit a PR!  
+📩 **Contact me at:** [your-email@example.com](mailto:your-email@example.com)  
+🚀 **GitHub Repository:** [Flight Management System](https://github.com/your-github-username/flight-management-system)
